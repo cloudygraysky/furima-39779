@@ -23,15 +23,15 @@
 
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
-| name          | string     | null: false                    |
-| description   | text       | null: false                    |
-| price         | integer    | null: false                    |
-| category_id   | integer    | null: false                    |
-| condition_id  | integer    | null: false                    |
-| delivery_fee  | string     | null: false                    |
-| delivery_date | string     | null: false                    |
-| prefecture_id | integer    | null: false                    |
-| user          | references | null: false, foreign_key: true |
+| name               | string     | null: false                    |
+| description        | text       | null: false                    |
+| price              | integer    | null: false                    |
+| category_id        | integer    | null: false                    |
+| condition_id       | integer    | null: false                    |
+| delivery_method_id | integer    | null: false                    |
+| delivery_date_id   | integer    | null: false                    |
+| prefecture_id      | integer    | null: false                    |
+| user               | references | null: false, foreign_key: true |
 
 ### Association
 
