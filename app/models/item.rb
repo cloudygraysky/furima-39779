@@ -9,8 +9,14 @@ class Item < ApplicationRecord
   belongs_to :user
   has_one_attached :image
 
-  validates :name, :description, :price, :user presence: true
+  validates :name,        presence: true
+  validates :description, presence: true
+  validates :price,       presence: true
 
-  validates :category_id, :condition_id, :delivery_method_id, :delivery_date_id, :prefecture_id numericality: { other_than: 1 , message: "can't be blank"}
+  validates :category_id,        numericality: { other_than: 1 , message: "can't be blank"}
+  validates :condition_id,       numericality: { other_than: 1 , message: "can't be blank"}
+  validates :delivery_method_id, numericality: { other_than: 1 , message: "can't be blank"}
+  validates :delivery_date_id,   numericality: { other_than: 1 , message: "can't be blank"}
+  validates :prefecture_id,      numericality: { other_than: 1 , message: "can't be blank"}
 
 end
