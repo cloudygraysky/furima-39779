@@ -9,9 +9,10 @@ class Item < ApplicationRecord
   belongs_to :user
   has_one_attached :image
 
-  validates :name,        presence: true
-  validates :description, presence: true
-  validates :price,       presence: true
+  validates :name,        presence: true, length: { in: 1..40 }
+  validates :image,       presence: true
+  validates :description, presence: true, length: { in: 1..1000 }
+  validates :price,       presence: true, numericality: { in: 300..9999999, only_integer: true }
 
   validates :category_id,        numericality: { other_than: 1 , message: "can't be blank"}
   validates :condition_id,       numericality: { other_than: 1 , message: "can't be blank"}
