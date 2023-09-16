@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :item do
     name               { 'test' }
     description        { 'testtesttest' }
-    price              { rand(300..9999999) }
+    price              { rand(300..9_999_999) }
     category_id        { rand(2..11) }
     condition_id       { rand(2..7) }
     delivery_method_id { rand(2..3) }
