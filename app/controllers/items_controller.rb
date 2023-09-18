@@ -35,8 +35,8 @@ class ItemsController < ApplicationController
     end
   end
 
-  #def destroy
-  #end
+  # def destroy
+  # end
 
   private
 
@@ -52,5 +52,4 @@ class ItemsController < ApplicationController
   def move_to_index
     redirect_to root_path unless user_signed_in? && current_user == @item.user
   end
-
 end
