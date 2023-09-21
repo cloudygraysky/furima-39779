@@ -60,7 +60,7 @@ RSpec.describe OrderAddress, type: :model do
       it '電話番号は半角のハイフンを含んだ形式だと保存できないこと' do
         @order_address.phone_number = '01-2345-6789'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Phone number is invalid")
+        expect(@order_address.errors.full_messages).to include('Phone number is invalid')
       end
       it '電話番号が全角数字だと保存できないこと' do
         @order_address.phone_number = '１２３４５６７８９０'
