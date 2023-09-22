@@ -6,8 +6,6 @@ FactoryBot.define do
     block         { 'いいい' }
     building      { '1-1' }
     phone_number  { '01234567890' }
-    user_id       { Faker::Number.non_zero_digit }
-    item_id       { Faker::Number.non_zero_digit }
     token         { Faker::Internet.password }
   end
 end
